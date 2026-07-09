@@ -76,7 +76,17 @@ OKF 本身遵循三条设计原则：
 
 > 本仓库根目录的 `.claude-plugin/marketplace.json` 就是插件市场清单：marketplace 名为 `okf-skill`，插件名为 `okf`，所以安装命令是 `okf@okf-skill`。
 
-**方式二：作为项目级 skill（随项目分发）**
+**方式二：用 `npx skills` 跨智能体一键安装**
+
+本仓库遵循 [Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills) 规范，因此兼容开源的 [`skills`](https://github.com/vercel-labs/skills) CLI——它会自动检测到 `skills/okf/SKILL.md` 并把 skill 安装到你正在用的编码智能体（Claude Code、Codex、Cursor、OpenCode 等）：
+
+```shell
+npx skills add https://github.com/h3ar7dump/okf-skill
+```
+
+无需手动克隆，命令会自动把 `okf` skill 放到对应智能体的 skills 目录下。
+
+**方式三：作为项目级 skill（随项目分发）**
 
 在你的项目根目录下：
 
@@ -100,7 +110,7 @@ cp -r .claude/skills/okf-upstream/skills/okf .claude/skills/okf
             └── GLOSSARY.md
 ```
 
-**方式三：作为用户级 skill（所有项目可用）**
+**方式四：作为用户级 skill（所有项目可用）**
 
 ```bash
 # Linux / macOS
@@ -110,7 +120,7 @@ cp -r skills/okf  ~/.claude/skills/okf
 Copy-Item -Recurse skills/okf  $HOME\.claude\skills\okf
 ```
 
-**方式四：直接引用原始文件**
+**方式五：直接引用原始文件**
 
 如果你只想读懂规范、自己实现工具，直接阅读 [`skills/okf/SKILL.md`](skills/okf/SKILL.md) 和 [`skills/okf/GLOSSARY.md`](skills/okf/GLOSSARY.md) 即可——它们就是全部内容，没有隐藏的运行时。
 
