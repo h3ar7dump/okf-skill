@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "okf",
+  "displayName": "OKF — Open Knowledge Format",
+  "version": "0.1.0",
+  "description": "Build, navigate, enrich, and lint OKF (Open Knowledge Format) bundles — vendor-neutral knowledge graphs of markdown files with YAML frontmatter. Use when the user wants to create or generate an OKF bundle, knowledge catalog, or LLM-wiki from a dataset, API, codebase, or document corpus; navigate or query an existing bundle to answer a question; enrich or maintain a bundle with new concepts, cross-links, or metadata; validate a bundle for OKF v0.1 conformance; or lint a bundle for orphans, broken links, stale claims, and contradictions.",
+  "author": {
+    "name": "h3ar7dump",
+    "url": "https://github.com/h3ar7dump"
+  },
+  "homepage": "https://github.com/h3ar7dump/okf-skill#readme",
+  "repository": "https://github.com/h3ar7dump/okf-skill",
+  "license": "MIT",
+  "keywords": [
+    "okf",
+    "open-knowledge-format",
+    "knowledge-graph",
+    "knowledge-base",
+    "knowledge-catalog",
+    "markdown",
+    "llm-wiki",
+    "agent-skill",
+    "claude"
+  ]
+}

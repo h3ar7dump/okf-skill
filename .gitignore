@@ -1,0 +1,25 @@
+# --- 操作系统 ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- 编辑器 / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Claude / agent 本地状态（仅本机，不入库） ---
+.claude/settings.local.json
+.claude/projects/
+.claude/todos/
+.claude/shell-snapshots/
+
+# --- 临时与日志 ---
+*.log
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*

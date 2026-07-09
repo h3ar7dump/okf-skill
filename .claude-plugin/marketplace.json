@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "okf-skill",
+  "description": "OKF (Open Knowledge Format) — an Agent Skill for building, navigating, enriching, and linting vendor-neutral Markdown knowledge graphs.",
+  "owner": {
+    "name": "h3ar7dump"
+  },
+  "plugins": [
+    {
+      "name": "okf",
+      "source": "./",
+      "description": "Build, navigate, enrich, and lint OKF (Open Knowledge Format) bundles — self-describing, maintainable Markdown knowledge graphs.",
+      "category": "knowledge"
+    }
+  ]
+}
