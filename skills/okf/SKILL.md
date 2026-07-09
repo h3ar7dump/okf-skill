@@ -1,6 +1,6 @@
 ---
 name: okf
-description: Build, navigate, enrich, and lint OKF (Open Knowledge Format) bundles — vendor-neutral knowledge graphs of markdown files with YAML frontmatter. Use when the user wants to create or generate an OKF bundle, knowledge catalog, or LLM-wiki from a dataset, API, codebase, or document corpus; navigate or query an existing bundle to answer a question; enrich or maintain a bundle with new concepts, cross-links, or metadata; validate a bundle for OKF v0.1 conformance; or lint a bundle for orphans, broken links, stale claims, and contradictions. Fires on: OKF, Open Knowledge Format, knowledge bundle, knowledge catalog, LLM wiki.
+description: Build, navigate, enrich, and lint OKF (Open Knowledge Format) bundles — vendor-neutral knowledge graphs of markdown files with YAML frontmatter. Use when the user wants to create or generate an OKF bundle, knowledge catalog, or LLM-wiki from a dataset, API, codebase, or document corpus; navigate or query an existing bundle to answer a question; enrich or maintain a bundle with new concepts, cross-links, or metadata; validate a bundle for OKF v0.1 conformance; or lint a bundle for orphans, broken links, stale claims, and contradictions.
 ---
 
 # OKF — Open Knowledge Format

@@ -17,9 +17,6 @@
     "knowledge-graph",
     "knowledge-base",
     "knowledge-catalog",
-    "markdown",
-    "llm-wiki",
-    "agent-skill",
-    "claude"
+    "llm-wiki"
   ]
 }
