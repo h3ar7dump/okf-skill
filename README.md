@@ -63,7 +63,20 @@ OKF 本身遵循三条设计原则：
 
 本 skill 遵循 [Anthropic Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills) 规范。把 `skills/okf/` 目录放到 Claude 能发现的位置即可，无需构建、无需依赖。
 
-**方式一：作为项目级 skill（推荐，随项目分发）**
+**方式一：通过 Claude Code 插件市场安装（推荐，最简单）**
+
+如果你的 Claude Code 版本支持插件市场（`/plugin` 命令），直接把本仓库添加为 marketplace 并安装即可，无需手动复制文件：
+
+```shell
+/plugin marketplace add h3ar7dump/okf-skill
+/plugin install okf@okf-skill
+```
+
+安装后，Claude 会自动发现 `okf` skill 并按需触发，无需任何激活命令。后续更新用 `/plugin marketplace update` 与 `/plugin update okf@okf-skill` 拉取最新版本。
+
+> 本仓库根目录的 `.claude-plugin/marketplace.json` 就是插件市场清单：marketplace 名为 `okf-skill`，插件名为 `okf`，所以安装命令是 `okf@okf-skill`。
+
+**方式二：作为项目级 skill（随项目分发）**
 
 在你的项目根目录下：
 
@@ -87,7 +100,7 @@ cp -r .claude/skills/okf-upstream/skills/okf .claude/skills/okf
             └── GLOSSARY.md
 ```
 
-**方式二：作为用户级 skill（所有项目可用）**
+**方式三：作为用户级 skill（所有项目可用）**
 
 ```bash
 # Linux / macOS
@@ -97,7 +110,7 @@ cp -r skills/okf  ~/.claude/skills/okf
 Copy-Item -Recurse skills/okf  $HOME\.claude\skills\okf
 ```
 
-**方式三：直接引用原始文件**
+**方式四：直接引用原始文件**
 
 如果你只想读懂规范、自己实现工具，直接阅读 [`skills/okf/SKILL.md`](skills/okf/SKILL.md) 和 [`skills/okf/GLOSSARY.md`](skills/okf/GLOSSARY.md) 即可——它们就是全部内容，没有隐藏的运行时。
 
